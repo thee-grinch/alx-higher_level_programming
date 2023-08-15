@@ -33,7 +33,10 @@ int is_palindrome(listint_t **head)
 		if (datas[j] == datas[i])
 			i--;
 		else
+		{
+			free(datas);
 			return (0);
+		}
 	}
 	free(datas);
 	return (1);
