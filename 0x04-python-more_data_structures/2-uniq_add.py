@@ -2,6 +2,8 @@
 
 def uniq_add(my_list=[]):
     """adds unique element of a list"""
-    from functools import reduce
-    addition = reduce(lambda x, y: x + y, set(my_list))
+    addition = 0
+    unique_set = set(my_list)
+    for num in unique_set:
+        addition += num
     return addition
