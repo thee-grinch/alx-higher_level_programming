@@ -4,7 +4,7 @@
 
 class Square:
     """this is a square class. """
-    def __init__(self, size=None):
+    def __init__(self, size=0):
         """This is a docstring for the init method.
 
         Args:
