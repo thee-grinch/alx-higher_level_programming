@@ -110,12 +110,14 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         shape = ""
-        for _ in range(self.__height):
-            shape += "#" * self.__width + "\n"
+        for i in range(self.__height):
+            shape += "#" * self.__width
+            if i != (self.__height - 1):
+                shape += '\n'
         return shape
 
     def __repr__(self):
         """This is a format for printing"""
         if self.__height == 0 or self.__width == 0:
             return ""
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"R4-rectangle.pyectangle({self.__width}, {self.__height})"
