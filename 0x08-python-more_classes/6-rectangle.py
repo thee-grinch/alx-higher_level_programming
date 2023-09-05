@@ -27,7 +27,7 @@
 class Rectangle:
     """this defines a rectangle class"""
 
-    number_of instances = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """This is a class constructor
@@ -50,7 +50,7 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -128,5 +128,5 @@ class Rectangle:
 
     def __del__(self):
         """This method prints bye rectangle whhen an instance is deleted"""
-        print("Bye rectangle..."i)
-        number_of_instances -= 1
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
