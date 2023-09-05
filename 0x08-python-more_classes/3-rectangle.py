@@ -113,9 +113,9 @@ class Rectangle:
         for _ in range(self.__height):
             shape += "#" * self.__width + "\n"
         return shape
-
+    """
     def __repr__(self):
-        """This is a format for printing"""
         if self.__height == 0 or self.__width == 0:
             return ""
         return f"Rectangle({self.__width}, {self.__height})"
+    """
