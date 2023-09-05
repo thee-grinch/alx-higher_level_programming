@@ -120,4 +120,4 @@ class Rectangle:
         """This is a format for printing"""
         if self.__height == 0 or self.__width == 0:
             return ""
-        return f"R4-rectangle.pyectangle({self.__width}, {self.__height})"
+        return f"Rectangle({self.__width}, {self.__height})"
