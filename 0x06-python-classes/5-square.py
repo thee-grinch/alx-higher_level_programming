@@ -41,4 +41,5 @@ class Square:
             for width in range(i):
                 print("#", end="")
             print()
-        print()
+        if i == 0:
+            print("")
