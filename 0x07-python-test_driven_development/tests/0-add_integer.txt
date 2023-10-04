@@ -33,3 +33,7 @@ OverflowError: cannot convert float infinity to integer
 102
 >>> add_integer(-5, -3)
 -8
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
