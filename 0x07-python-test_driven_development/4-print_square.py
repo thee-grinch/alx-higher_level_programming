@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ this module attempts to print a square using the hash (#)symbol"""
+
+
 def print_square(size):
     """the function to print an integer of size size"""
     if not isinstance(size, int):
