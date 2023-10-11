@@ -7,8 +7,8 @@ def pascal_triangle(n):
     if n <= 0:
         return []
     triangle_list = [[1]]
-    for a in range(n):
-        buffer = triangle_list[a]
+    for a in range(0, n - 1):
+        buffer = triangle_list[-1]
         tmp = [1]
         for i in range(len(buffer) - 1):
             tmp.append(buffer[i] + buffer[i + 1])
