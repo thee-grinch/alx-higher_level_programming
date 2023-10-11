@@ -18,6 +18,5 @@ class Student:
 
     def reload_from_json(self, json):
         """reloads a file from json"""
-        for key, value in self.__dict__:
-            if hasattr(json, key):
-                setattr(self.__dict__, key, json.get(key))
+        for key, value in json.items():
+            setattr(self, key, value)
