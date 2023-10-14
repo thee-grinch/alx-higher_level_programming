@@ -8,14 +8,13 @@ class Rectangle(Base):
     """this is a class rectangle that inherits from base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """this is a class constructor"""
-        for attr, value in {"width": width, "height": height, \
-                "x": x, "y": y}:
+        for attr, value in {"width": width, "height": height, "x": x, "y": y}.items():
             if not isinstance(value, int):
                 raise TypeError(f"{attr} must be an integer")
-        for attr, value in {"width": width, "height": height}:
+        for attr, value in {"width": width, "height": height}.items():
             if value <= 0:
                 raise ValueError(f"{attr} must be > 0")
-        for attr, value in {"x": x, "y": y}:
+        for attr, value in {"x": x, "y": y}.items():
             if value < 0:
                 raise ValueError(f"{attr} must be >= 0")
         self.__width=width
@@ -80,5 +79,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = y
 
-
-
+    def area(self):
+        """This defines the area of a rectagle"""
+        return self.__width * self.__height
