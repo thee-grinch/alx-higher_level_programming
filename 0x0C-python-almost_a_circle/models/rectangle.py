@@ -8,7 +8,10 @@ class Rectangle(Base):
     """this is a class rectangle that inherits from base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """this is a class constructor"""
-        for attr, value in {"width": width, "height": height, "x": x, "y": y}.items():
+        for attr, value in {
+                "width": width, "height":
+                height, "x": x, "y": y
+                }.items():
             if not isinstance(value, int):
                 raise TypeError(f"{attr} must be an integer")
         for attr, value in {"width": width, "height": height}.items():
@@ -17,7 +20,7 @@ class Rectangle(Base):
         for attr, value in {"x": x, "y": y}.items():
             if value < 0:
                 raise ValueError(f"{attr} must be >= 0")
-        self.__width=width
+        self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
@@ -82,3 +85,32 @@ class Rectangle(Base):
     def area(self):
         """This defines the area of a rectagle"""
         return self.__width * self.__height
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
+
+    def display(self):
+        """this method prints the rectangle to the stdout"""
+        for _ in range(self.__y):
+            print()
+        for i in range(self.__height):
+            [print(" ", end="") for x in range(self.__x)]
+            [print("#", end="") for i in range(self.__width)]
+            print()
+
+    def update(self, *args, **kwargs):
+        """this saves the class instance variables to a external file"""
+        if len(args) == 0:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        else:
+            values = ["id", "width", "height", "x", "y"]
+            for i, arg in enumerate(args):
+                setattr(self, values[i], arg)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a class"""
+        keys = ["id", "width", "height", "x", "y"]
+        return {key: getattr(self, key) for key in keys}
