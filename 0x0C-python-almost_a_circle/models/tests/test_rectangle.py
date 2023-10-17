@@ -51,5 +51,10 @@ class test_rectangle(unittest.TestCase):
         r2 = Rectangle(2, 3)
         self.assertEqual(r2.area(), 6)
 
+    def test_display(self):
+        """this is a test for display method"""
+        r6 = Rectangle(2, 2);
+        self.assertEqual(r6.display(), "
+
 if __name__ == "__main__":
     unittest.main()

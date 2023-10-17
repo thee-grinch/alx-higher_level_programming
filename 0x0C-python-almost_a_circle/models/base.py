@@ -7,7 +7,7 @@ class Base():
     """This is a base class for managing id
     attributes for future classes"""
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
         """This is a class constructor
         with public instance attr id"""
@@ -52,6 +52,7 @@ class Base():
         r = cls(2, 2)
         r.update(**dictionary)
         return r
+
     @classmethod
     def load_from_file(cls):
         """Return a list of classes instantiated from a file of JSON strings.
