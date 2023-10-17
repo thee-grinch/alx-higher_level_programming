@@ -45,13 +45,12 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         """This creates and returns an instance"""
-        if type(cls).__name__ == "Square":
+        if cls.__name__ == "Square":
             s = cls(1)
-            s.update(**dictionary)
-            return s
-        r = cls(2, 2)
-        r.update(**dictionary)
-        return r
+        else:
+            s = cls(1, 1)
+        s.update(**dictionary)
+        return s
 
     @classmethod
     def load_from_file(cls):
