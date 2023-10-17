@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """this module defines a class
 square that import from rectangle"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
