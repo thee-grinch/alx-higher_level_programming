@@ -1,3 +1,3 @@
---lists all the availlable databases
+-- lists all the availlable databases.
 SHOW DATABASES;
 
