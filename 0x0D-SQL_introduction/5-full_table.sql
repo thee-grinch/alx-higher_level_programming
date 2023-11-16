@@ -1,2 +1,2 @@
 -- shows a table description
-SHOW hbtn_0c_0; 
+SHOW first_table; 
