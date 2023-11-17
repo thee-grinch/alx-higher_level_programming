@@ -1,3 +1,3 @@
 -- sql functions
 SELECT AVG(score)
-FROM second_table
+FROM second_table;
