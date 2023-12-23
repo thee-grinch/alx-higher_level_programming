@@ -10,7 +10,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost",
                          port=3306, user=us, passwd=pas, db=data)
     cursor = db.cursor()
-    sql_query = "SELECT * FROM states WHERE name LIKE BINARY 'N%'ORDER BY states.id"
+    sql_query = "SELECT * FROM states WHERE
+    name LIKE BINARY 'N%'ORDER BY states.id"
     cursor.execute(sql_query)
     rows = cursor.fetchall()
     for row in rows:
