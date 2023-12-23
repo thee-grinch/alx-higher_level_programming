@@ -9,7 +9,7 @@ from model_state import base, State
 
 if __name__ == "__main__":
 
-    DATABASE_URL = f"""mysql+mysqlconnector://{argv[1]}
+    DATABASE_URL = f"""mysql+mysqldb://{argv[1]}
     :{argv[2]}@localhost:3306/{argv[3]}"""
 
     engine = create_engine(DATABASE_URL, echo=True)
