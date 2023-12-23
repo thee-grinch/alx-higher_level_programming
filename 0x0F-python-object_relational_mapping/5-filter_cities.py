@@ -11,7 +11,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("""SELECT cities.id, cities.name, states.name FROM
                    cities INNER JOIN states on states.id=cities.state_id
-                   ORDER BY cities.id WHERE name = %s """, (sys.argv[4],))
+                   WHERE name = %s ORDER BY cities.id""", (sys.argv[4],))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
