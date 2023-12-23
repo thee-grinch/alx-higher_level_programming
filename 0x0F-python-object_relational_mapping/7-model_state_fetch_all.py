@@ -11,6 +11,7 @@ if __name__ == "__main__":
     :{argv[2]}@localhost:3306/{argv[3]}"""
 
     engine = create_engine(DATABASE_URL, echo=True)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
