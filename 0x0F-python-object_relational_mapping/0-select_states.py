@@ -1,12 +1,15 @@
+#!/usr/bin/python3
+"""this module uses mysqldb"""
+
 import MySQLdb
 import sys
 
 
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
+us = sys.argv[1]
+pas = sys.argv[2]
+data = sys.argv[3]
 
-db = MySQLdb.connect(host="127.0.0.1", port=3306, user=username, passwd=password, db=database)
+db = MySQLdb.connect(host="127.0.0.1", port=3306, user=us, passwd=pas, db=data)
 
 cursor = db.cursor()
 
