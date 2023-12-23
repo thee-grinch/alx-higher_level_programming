@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" this module uses mysqldb """
+""" this module uses mysqldb  and filters """
 import MySQLdb
 import sys
 
