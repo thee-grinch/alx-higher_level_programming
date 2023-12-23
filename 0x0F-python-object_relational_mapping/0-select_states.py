@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""this module uses mysqldb"""
 
 import MySQLdb
 import sys
+"""this module uses mysqldb"""
 
 
 us = sys.argv[1]
