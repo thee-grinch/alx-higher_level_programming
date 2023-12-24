@@ -13,7 +13,9 @@ if __name__ == "__main__":
                    cities INNER JOIN states on states.id=cities.state_id
                    WHERE states.name = %s ORDER BY cities.id""", (sys.argv[4],))
     rows = cursor.fetchall()
+    output = ""
     for row in rows:
-        print(row[1], sep=", ")
+        output += ", ".join(map(str, row[1]))
+    print(output)
     cursor.close()
     db.close()
