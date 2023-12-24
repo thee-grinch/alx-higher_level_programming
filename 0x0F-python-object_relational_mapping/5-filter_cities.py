@@ -14,8 +14,8 @@ if __name__ == "__main__":
                    WHERE states.name = %s ORDER BY cities.id""", (sys.argv[4],))
     rows = cursor.fetchall()
     output = ""
-    for row in rows:
-        output += ", ".join(map(str, row[1]))
+    names = [row[1] for row in rows]
+    output = ", ".join(names)
     print(output)
     cursor.close()
     db.close()
