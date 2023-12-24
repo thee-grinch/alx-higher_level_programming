@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""this module queries from a database"""
+""" this module queries from a database
+"""
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
