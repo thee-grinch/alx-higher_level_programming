@@ -14,6 +14,6 @@ if __name__ == "__main__":
                    WHERE name = %s ORDER BY cities.id""", (sys.argv[4],))
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        print(row[0], sep=",")
     cursor.close()
     db.close()
