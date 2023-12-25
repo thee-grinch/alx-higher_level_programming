@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-""" this script updates a query"""
-
-from sys import argv
-from model_state import Base, State
+"""This module displays all list"""
+from model_state import State, Base
+from model_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-
+from sys import argv
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -14,8 +13,8 @@ if __name__ == "__main__":
     session = Session()
     Base.metadata.create_all(engine)
 
-    states = session.query(State).filter(State.name.like('%a%')).all()
-    for state in states:
-        session.delete(state)
-    session.commit()
+    instances = session.query(State.name, City.id, City.name).filter(State.id == City.states_id).order_by(City.id).all()
+    for instance in instances:
+        print('{}: ({}) {}'.format(instance[0], instance[1], instance[2]))
     session.close()
+
