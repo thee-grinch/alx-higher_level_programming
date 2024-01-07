@@ -3,8 +3,11 @@
 
 import urllib.request
 import urllib.parse
+import sys
 
 if __name__ == "__main__":
-    encoded = urllib.parse.urlencode({'email': $2}).encode('utf-8')
-    with urllib.request.urlopen($1, data=encoded) as response:
+    url = sys.argv[1]
+    data = {'email': sys.argv[2]}
+    encoded = urllib.parse.urlencode(data).encode('utf-8')
+    with urllib.request.urlopen(encoded, data=encoded) as response:
         print(response.read().decode('utf-8'))
