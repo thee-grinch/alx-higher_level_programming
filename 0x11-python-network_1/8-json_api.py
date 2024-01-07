@@ -8,7 +8,8 @@ if __name__ == "__main__":
         data = {'q': sys.argv[1]}
     else:
         data = {'q': ""}
-    with requests.post('http://0.0.0.0:5000/search_user', data=data) as response:
+    with requests.post('http://0.0.0.0:5000/search_user',
+                       data=data) as response:
         try:
             data = response.json()
             if data == {}:
