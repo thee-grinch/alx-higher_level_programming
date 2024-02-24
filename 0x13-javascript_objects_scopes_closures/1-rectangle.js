@@ -4,6 +4,7 @@ class Rectangle {
     this.width = w;
     this.height = h;
   }
+
   print () {
     let i;
     let j;
