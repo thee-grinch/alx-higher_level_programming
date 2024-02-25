@@ -15,6 +15,6 @@ request(url, (error, response, body) => {
       console.error(err);
       return;
     }
-    console.log(`Successfully stored the contents of ${url} in ${filePath}`);
+    // console.log(`${url} in ${filePath}`);
   });
 });
