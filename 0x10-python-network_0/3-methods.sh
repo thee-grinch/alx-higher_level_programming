@@ -1,3 +1,3 @@
 #!/bin/bash
-#displays the availablle option
-curl -i $1 | grep -i 'Allow:' | cut -d " " -f 2-
+# Send an OPTIONS request to the server and display the allowed methods
+curl -sI "$1" | grep "Allow:" | cut -d' ' -f2-
